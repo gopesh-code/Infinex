@@ -1,0 +1,51 @@
+{% extends 'basic.html' %}
+
+{% load static %}
+
+{% block title %} Login Page {% endblock %}
+{% block login %} active {% endblock %}
+
+{% block css %}
+
+{% endblock %}
+
+{% block body %}
+<html>
+	<head>
+		<link rel="stylesheet" type="text/css" href="{% static 'css/login.css' %}">
+		<link rel="stylesheet" href="{% static 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css' %}">
+	</head>
+
+	<body>
+		<form action="/login/" method="POST"> {% csrf_token %}
+		<div class="container" id="container">
+			<div class="sign-in-container">
+				<form action="#">
+				<h1>Sign In</h1>
+				<br>
+				<label for="username" class="form-label">Username</label>
+      			<input type="text" class="form-control" id="username" name="username"><br>
+				<label for="password" class="form-label">Password</label>
+      			<input type="password" class="form-control" id="password" name="password">
+				<br>
+				<a href="#">Forgot Your Password</a>
+				<br>
+				<button type="submit" class="btn btn-primary">Sign in</button>
+				</form>
+				<br>
+				<br>
+				<span>or use your account</span>
+				<div class="social-container" style="align:center;">
+				<a href="#" class="social"><i class="fa fa-facebook"></i></a>
+				<a href="#" class="social"><i class="fa fa-google"></i></a>
+				<a href="#" class="social"><i class="fa fa-linkedin"></i></a></div>
+				<br>
+			</div>
+		</form>
+		<script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"></script>
+		<script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-auth.js"></script>
+		<script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-firestore.js"></script>
+
+	</body>
+</html>
+{% endblock %}

@@ -1,0 +1,36 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Varela+Round&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,800');
+
+
+.navbar{
+  background-color: #094a89;
+  display: flex;
+  align-items: center;
+  font-family: 'Montserrat', sans-serif;
+  height: auto;
+  margin: auto;
+  overflow:visible;
+  }
+
+.navbar-brand
+  {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 40px;
+    width: 850px;
+  }
+  
+.nav-link {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 16px;
+    }
+
+#navbarSupportedContent
+{
+  text-align: center;
+}
+
+#navbarDarkDropdownMenuLink
+{
+  text-align: left;
+}

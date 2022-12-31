@@ -1,0 +1,247 @@
+{% extends 'basic.html' %}
+
+{% block title %} Application Form {% endblock %}
+{% block application_form %} active {% endblock %}
+{% block css %}
+{% endblock %}
+{% block body %}
+
+{% if hide.exists %}
+<div class="container mt-4">
+    <div class="row">
+        <h1 style="text-align: center;">Personal Details</h1>
+            <hr>
+        <div class="col-md-4">
+            <div class="profile-img">
+                {% if user.application.student_profile.url %}
+                <img src="{{user.application.student_profile.url}}" alt="" width="310px" height="270px">
+                {% endif %}
+            </div>
+        </div>
+        <div class="col-md-8">
+            <div class="profile-tab">
+                <div class="tab-pane">
+                    <br><br>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <label>Course :</label>
+                        </div>
+                        <div class="col-md-6">
+                            <p>{{user.application.course}}</p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <label>Full Name :</label>
+                        </div>
+                        <div class="col-md-6">
+                            <p>{{user.application.name}}</p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <label>Email ID :</label>
+                        </div>
+                        <div class="col-md-6">
+                            <p>{{user.email}}</p>
+                        </div>
+                    </div>
+                    {% if user.application.phone_no %}
+                    <div class="row">
+                        <div class="col-md-6">
+                            <label>Phone Number :</label>
+                        </div>
+                        <div class="col-md-6">
+                            <p>{{user.application.phone_no}}</p>
+                        </div>
+                    </div>
+                    {% endif %}
+                    <div class="row">
+                        <div class="col-md-6">
+                            <label>Address :</label>
+                        </div>
+                        <div class="col-md-6">
+                            <p>{{user.application.address}}</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+</div>
+<hr>
+<div class="container mt-4">
+    <div class="row">
+        <h1 style="text-align: center;">Educational Details</h1>
+            <hr>
+        <div class="col-md-4">
+            <div class="profile-img">
+                <h3>10th Std Details</h3>
+            </div>
+        </div>
+        <div class="col-md-8">
+            <div class="profile-tab">
+                <div class="tab-pane">
+                    <br><br>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <label>10th Percentage :</label>
+                        </div>
+                        <div class="col-md-6">
+                            <p>{{user.application.ssc_percentage}}%</p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <label>10th Marksheet :</label>
+                        </div>
+                        <div class="col-md-6">
+                            <p><a href="{{user.application.ssc_marksheet.url}}">View 10th Marksheet</a></p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <label>10th Certificate :</label>
+                        </div>
+                        <div class="col-md-6">
+                            <p><a href="{{user.application.ssc_passing_certificate.url}}"> View 10th Certificate</a></p>
+                        </div>
+                    </div>
+                    {% if user.application.phone_no %}
+                    <div class="row">
+                        <div class="col-md-6">
+                            <label>10th Leaving Certificate :</label>
+                        </div>
+                        <div class="col-md-6">
+                            <p><a href="{{user.application.ssc_leaving_certificate.url}}">View SSC Leaving Certificate</a></p>
+                        </div>
+                    </div>
+                    {% endif %}
+                </div>
+            </div>
+        </div>
+</div>
+<hr>
+
+<div class="container mt-4">
+    <div class="row">
+        <div class="col-md-4">
+            <div class="profile-img">
+                <h3>12th Std Details</h3>
+            </div>
+        </div>
+        <div class="col-md-8">
+            <div class="profile-tab">
+                <div class="tab-pane">
+                    <br><br>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <label>12th Percentage :</label>
+                        </div>
+                        <div class="col-md-6">
+                            <p>{{user.application.hsc_percentage}}%</p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <label>12th Marksheet :</label>
+                        </div>
+                        <div class="col-md-6">
+                            <p><a href="{{user.application.hsc_marksheet.url}}">View 12th Marksheet</a></p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <label>12th Passing Certificate :</label>
+                        </div>
+                        <div class="col-md-6">
+                            <p><a href="{{user.application.hsc_passing_certificate.url}}">View 12th Marksheet</a></p>
+                        </div>
+                    </div>
+                    {% if user.application.phone_no %}
+                    <div class="row">
+                        <div class="col-md-6">
+                            <label>12th Leaving Certificate :</label>
+                        </div>
+                        <div class="col-md-6">
+                            <p><a href="{{user.application.hsc_leaving_certificate.url}}">View 12th Leaving Certificate</a></p>
+                        </div>
+                    </div>
+                    {% endif %}
+                </div>
+            </div>
+        </div>
+</div>
+<hr>
+
+<div class="container mt-4">
+    <div class="row">
+        <div class="col-md-4">
+            <div class="profile-img">
+                <h3>DoB and JEE Scorecard</h3>
+            </div>
+        </div>
+        <div class="col-md-8">
+            <div class="profile-tab">
+                <div class="tab-pane">
+                    <br><br>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <label>Common Entrance Test Percentile :</label>
+                        </div>
+                        <div class="col-md-6">
+                            <p>{{user.application.cet_percentile}}</p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <label>Common Entrance Test Scorecard :</label>
+                        </div>
+                        <div class="col-md-6">
+                            <p><a href="{{user.application.cet_scorecard.url}}">View Common Entrance Test Scorecard</a></p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <label>JEE Percentile :</label>
+                        </div>
+                        <div class="col-md-6">
+                            <p>{{user.application.jee_percentile}}</p>
+                        </div>
+                    </div>
+                    {% if user.application.phone_no %}
+                    <div class="row">
+                        <div class="col-md-6">
+                            <label>JEE Scorecard :</label>
+                        </div>
+                        <div class="col-md-6">
+                            <p><a href="{{user.application.jee_scorecard.url}}">View JEE Scorecard</a></p>
+                        </div>
+                    </div>
+                    {% endif %}
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <label>Exam :</label>
+            <select name="exam">
+                <option value="vit">VITEEE 2023</option>
+                <option value="bit">BITSAT 2023</option>
+                <option value="upe">UPES DAT 2023</option>
+                <option value="com">COMEDK 2023</option>
+                <option value="met">MET 2023</option>
+            </select><br>
+        </div>
+</div>
+<hr>
+<h4 >Click here to edit the application</h4>
+    <a href="/edit_application/" class="btn btn-secondary" style="width: 20rem;Text-align: center;">Edit Application</a>
+<br><br>
+{% else %}
+<div class="container mt-4">
+    <form method="POST" enctype="multipart/form-data"> {% csrf_token %}
+    {{form.as_p}}
+    <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+</div>
+{% endif %}
+{% endblock %}
