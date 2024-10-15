@@ -40,10 +40,10 @@
 ## Installation
 
 1. **Clone the repository**:
-   ```bash
-   git clone https://github.com/gopesh-code/Infinex.git
-   cd Infinex
-   ```
+  ```bash
+  git clone https://github.com/gopesh-code/Infinex.git
+  cd Infinex
+  ```
 2. **Set up virtual environment**:
   ```bash
   python -m venv env
